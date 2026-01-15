@@ -24,11 +24,7 @@ const Upload = () => {
 
     try {
       setLoading(true);
-      await api.post("/audio/upload", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      await api.post("/audio/upload", formData);
 
       navigate("/");
     } catch (err) {
